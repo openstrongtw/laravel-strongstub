@@ -20,6 +20,9 @@
             "OpenStrong\\StrongAdmin\\": "src/"
         }
     },
+    "replace": {
+        "openstrong/laravel-strongstub":"2.*"
+    },
     "extra": {
         "laravel": {
             "providers": [

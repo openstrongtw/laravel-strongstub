@@ -1,0 +1,67 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+
+class DummyClass extends Model
+{
+    public $tableComments = 'DummyTableComments';DummyConnection
+    protected $table = 'DummyTableName';
+    protected $guarded = ['id', 'created_at', 'updated_at', 'deleted_at'];
+    
+    /**
+     * Validator rules
+     * @param type $on
+     * @return type
+     */
+    public function rules()
+    {
+        return [DummyRules
+        ];
+    }
+
+    /**
+     * Validator messages
+     * @return type
+     */
+    public function messages()
+    {
+        return [];
+    }
+    
+    /**
+     * Validator customAttributes
+     * @return type
+     */
+    public function customAttributes()
+    {
+        return [DummyAttributes
+        ];
+    }
+    
+    public function getAttributeLabel($key)
+    {
+        $datas = $this->customAttributes();
+        return $datas[$key] ?? $key;
+    }
+    
+    /**
+     * Fill the model with an array of attributes.
+     * @param type $attributes
+     * @return $this
+     */
+    public function fill($attributes)
+    {
+        foreach ($attributes as $key => $attribute)
+        {
+            if ($attribute === null)
+            {
+                //unset($attributes[$key]);
+                $attributes[$key] = '';
+            }
+        }
+        parent::fill($attributes);
+        return $this;
+    }
+}

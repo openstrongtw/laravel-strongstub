@@ -1,0 +1,30 @@
+{
+    "name": "openstrongtw/laravel-strongstub",
+    "description": "在十秒內建立完成 CURD 增刪改查的邏輯。",
+    "type": "laravel-extension",
+    "homepage": "http://strongstub.strongshop.cn",
+    "keywords": ["laravel", "curd", "rules"],
+    "license": "MIT", 
+    "authors": [
+        {
+            "name": "Karen",
+            "email": "openstrong@foxmail.com"
+        }
+    ],
+    "require": {
+        "php" : ">=7.0",
+        "laravel/framework": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenStrong\\StrongAdmin\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OpenStrong\\StrongAdmin\\StrongStubServiceProvider"
+            ]
+        }
+    }
+}
